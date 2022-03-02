@@ -1,0 +1,32 @@
+{
+	"name": "TestSpark",
+	"properties": {
+		"activities": [
+			{
+				"name": "Notebook1",
+				"type": "SynapseNotebook",
+				"dependsOn": [],
+				"policy": {
+					"timeout": "7.00:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"notebook": {
+						"referenceName": "Using Azure Open Datasets in Synapse",
+						"type": "NotebookReference"
+					},
+					"snapshot": true,
+					"sparkPool": {
+						"referenceName": "ws1sparkpool1",
+						"type": "BigDataPoolReference"
+					}
+				}
+			}
+		],
+		"annotations": []
+	}
+}
